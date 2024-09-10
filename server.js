@@ -3,7 +3,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const app = express()
-const PORT = 5000
+const PORT = 4001
 
 // Resolving dirnanme for ES module
 const __filename = fileURLToPath(import.meta.url)
