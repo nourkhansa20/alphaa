@@ -10,10 +10,10 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Use the Client app
-app.use(express.static(path.join(__dirname, '/client/dist')))
+app.use('/alphaa', express.static(path.join(__dirname, '/client/dist')))
 
 // Render client for any path
-app.get('*', (req, res) => {
+app.get('/alphaa/*', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/dist/index.html'))
 })
 
