@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../assets/Logo.png'
+import Logo from '../assets/logo.png'
 import { PrimaryButton } from '../moon-ui/Buttons'
 import MapMarker from '../assets/MapMarker'
 import TimeIcon from '../assets/TimeIcon'
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='flex justify-center items-center w-full p-1 bg-white'>
-                <div className='flex justify-between items-center   w-[60%]'>
+                <div className='flex justify-between items-center w-[60%]'>
 
                     <div>
                         <img src={Logo} alt="alphaa-logo" className='w-[35ex]' />
