@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
-
+import Arrow from '../../assets/Arrow'
 const Carousel = () => {
     const images = [
         {
@@ -28,10 +28,10 @@ const Carousel = () => {
     return (
         <div className="relative">
             <div className="absolute left-0 top-1/2 cursor-pointer text-white z-10 rounded-full size-10 flex items-center justify-center  bg-opacity-30 bg-black hover:bg-opacity-100 transition-all duration-300 " onClick={handlePrev}>
-                {`<`}
+                <Arrow className='w-5 rotate-180 fill-black'/>
             </div>
             <div className="absolute right-0 top-1/2  cursor-pointer text-white z-10 rounded-full size-10 flex items-center justify-center  bg-opacity-30 bg-black hover:bg-opacity-100 transition-all duration-300" onClick={handleNext}>
-                {`>`}
+            <Arrow className='w-5 fill-black'/>
             </div>
 
             <div>
@@ -68,7 +68,7 @@ const CarouselItem = ({ item }) => {
             <div id='image' className=' bg-cover bg-center flex justify-center items-center h-full' style={{ backgroundImage: `url('/alphaa/${item.src}')` }}>
 
                 <div id='text-container' className='opacity-0 flex flex-col justify-center items-center '>
-                    <h1 className='lg:text-[10ex] text-xl text-white w-[30ex] font-bold'>{item.title}</h1>
+                    <h1 className='lg:text-[10ex] text-xl text-white lg:w-full  w-[30ex] font-bold'>{item.title}</h1>
                     <p className='lg:text-2xl text-sm p-5 text-white font-semibold '>{item.desc}</p>
                 </div>
             </div>
