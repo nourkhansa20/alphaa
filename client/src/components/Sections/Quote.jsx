@@ -17,7 +17,7 @@ const Quote = () => {
             left: '-12ex',
             scrollTrigger: {
                 trigger: '#house',
-                start: 'top 80%', 
+                start: 'top 80%',
             },
         });
 
@@ -45,8 +45,8 @@ const Quote = () => {
                 <div className='hidden lg:block w-[60ex] bg-primary h-[50ex] absolute' />
                 <div />
                 <div className='bg-[rgb(34,35,45)] lg:pb-[30ex] pb-[8ex] h-full w-[90%] relative right-0 rounded-2xl'>
-                    <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-between h-full lg:gap-0 gap-7'>
-                        <div className='min-h-full flex flex-col gap-2 justify-center items-center lg:ml-[10ex]'>
+                    <div className='flex flex-col lg:flex-row justify-center items-center  lg:justify-between h-full lg:gap-0 gap-7'>
+                        <div className='min-h-full flex flex-col lg:gap-10 gap-2 justify-center items-center lg:ml-[10ex]'>
                             <HomeIcon className='fill-secondary lg:w-[30ex] w-[10ex] mt-7 lg:mt-0' />
                             <h3 className='lg:text-5xl text-2xl text-white font-bold '> We believe you're bright </h3>
                         </div>
