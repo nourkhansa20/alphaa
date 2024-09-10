@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   useEffect(() => {
+    const isMobile = window.innerWidth < 768; // Adjust this value based on your mobile breakpoint
     gsap.fromTo(
       '#cards',
       {
@@ -26,27 +27,32 @@ const Home = () => {
         ease: 'power2.out',
         scrollTrigger: {
           trigger: '#cards_container',
-          start: 'top 80%', // Animation starts when the top of #cards reaches 80% of the viewport height
+          start: isMobile ? 'top 90%' : 'top 80%', // Adjust start point based on screen size
+          invalidateOnRefresh: true, // Recalculates on window resize
         },
       }
     );
+  }, []);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
   }, []);
 
   return (
     <div>
       <Carousel />
       <section id='cards_container' className="bg-primary border-secondary border-t-[1ex] mt-3 p-4 pb-[6ex] overflow-hidden ">
-        <div id="cards" className="flex gap-7 justify-center items-center ">
-          <Card className="w-[91ex] py-[7ex] h-[35ex] px-[5ex] flex flex-col gap-5">
-            <h2 className="font-bold text-3xl"> Our Story</h2>
-            <p className="text-xl">
+        <div id="cards" className="flex lg:flex-row flex-col gap-7 justify-center items-center ">
+          <Card className="max-w-[91ex] py-[7ex] h-[35ex] px-[5ex] flex flex-col gap-5">
+            <h2 className="font-bold text-2xl lg:text-3xl"> Our Story</h2>
+            <p className="text-sn lg:text-xl">
               Alpha Financial Solutions provides bespoke mortgage and finance services. We believe that financial freedom is not just a goal but a journey, and we are here to guide you every step of the way.
             </p>
           </Card>
 
-          <Card className="w-[91ex] py-[7ex] h-[35ex] px-[5ex] flex flex-col gap-5">
-            <h2 className="font-bold text-3xl"> Our Mission </h2>
-            <p className="text-xl">
+          <Card className="max-w-[91ex] py-[7ex] h-[35ex] px-[5ex] flex flex-col gap-5">
+            <h2 className="font-bold text-2xl lg:text-3xl"> Our Mission </h2>
+            <p className="text-sm lg:text-xl">
               At Alpha Financial Solutions, our mission is to empower individuals and businesses to achieve their financial aspirations through tailored solutions, expert advice, and exceptional service. We strive to build lasting relationships based on trust, integrity, and mutual success.
             </p>
           </Card>

@@ -29,7 +29,6 @@ const ContactUs = () => {
     ]
     return (
         <div>
-
             <div className='flex justify-around'>
                 <div className='flex flex-col gap-7'>
                     <h2 className='font-bold text-5xl '>Contact Us</h2>
@@ -43,7 +42,7 @@ const ContactUs = () => {
                     </div>
                     <SocialMedia />
                 </div>
-                <img src={PhoneImage} alt="phone_image" className='h-[40ex]' />
+                <img src={PhoneImage} alt="phone_image" className='lg:block hidden h-[40ex]' />
             </div>
             <TalkWithUs />
 

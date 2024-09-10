@@ -3,7 +3,7 @@ import HandIcon from '../../assets/HandIcon'
 
 const TalkWithUs = () => {
     return (
-        <div className='h-[50ex]  bg-cover mt-[5ex]' style={{ backgroundImage: `url(/10.jpg)`, backgroundRepeat: 'no-repeat' }}>
+        <div className='h-[50ex]  bg-cover mt-[5ex] text-center lg:text-start' style={{ backgroundImage: `url(/alphaa/10.jpg)`, backgroundRepeat: 'no-repeat' }}>
             <div className='size-full flex flex-col gap-4 justify-center items-center bg-white bg-opacity-20'>
                 <HandIcon className='w-[8ex] fill-primary' />
                 <h2 className='text-5xl font-bold text-primary'>Talk to PAWAN now!</h2>

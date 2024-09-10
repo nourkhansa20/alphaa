@@ -23,13 +23,13 @@ Mr. Pawan Punjabi, envisioned a company where customer-centricity and financial 
   return (
     <div>
       <div >
-        <div className='w-[60%] m-auto'>
+        <div className='lg:w-[60%] lg:text-start text-center m-auto'>
           <h1 className='text-primary font-bold text-5xl mt-4'>About Us</h1>
-          <div className='mt-[20ex] flex flex-col justify-center items-center'>
+          <div className='lg:mt-[20ex] mt-[7ex] flex flex-col justify-center items-center'>
             <HomeIcon className="fill-secondary w-[10ex]" />
-            <h2 className='text-4xl text-primary font-bold my-9'>We believe you’re bright</h2>
-            <div className='grid grid-cols-2 gap-14 mt-[10ex]'>
-              <img src="/11.jpg" alt="family-image" className='w-[80ex] border-r-[9px] border-b-[9px] rounded-xl border-secondary' />
+            <h2 className='text-4xl text-primary font-bold lg:my-9 my-6'>We believe you’re bright</h2>
+            <div className='grid lg:grid-cols-2 gap-14 lg:mt-[10ex] mt-[4ex] p-3 lg:p-0'>
+              <img src="/alphaa/11.jpg" alt="family-image" className='w-[80ex] border-r-[9px] border-b-[9px] rounded-xl border-secondary' />
               {
                 items.map((item, index) => (
                   <div className='flex flex-col gap-7 '>
@@ -43,9 +43,9 @@ Mr. Pawan Punjabi, envisioned a company where customer-centricity and financial 
         </div>
 
 
-        <div className='flex justify-center  items-center gap-16 bg-primary w-screen my-[10ex] p-14'>
+        <div className='flex flex-col lg:flex-row justify-center  items-center gap-16 bg-primary w-screen my-[10ex] p-14'>
           <Banner />
-          <div className='flex flex-col gap-7 w-[70ex]'>
+          <div className='flex flex-col gap-7 lg:w-[70ex] w-[45ex]'>
             <h3 className='text-secondary font-semibold'>Why Choose Us</h3>
             <h1 className='font-bold text-white text-4xl'>Our Expertise</h1>
             <p className='text-white'>Expertise and Experience: With over 20 Years of experience in the industry, our team of financial experts brings a wealth of knowledge and expertise to the table.</p>
@@ -89,13 +89,13 @@ const Banner = () => {
   }, [images]);
 
   return (
-    <div className='rounded-3xl border size-[80ex] relative overflow-hidden bg-white border-l-[9px] border-b-[9px] border-t-0 border-r-0 border-secondary'>
+    <div className='rounded-3xl border lg:size-[80ex] size-[45ex] relative overflow-hidden bg-white border-l-[9px] border-b-[9px] border-t-0 border-r-0 border-secondary'>
       <div className="absolute inset-0 z-0">
         {images.map((src, index) => (
           <img
             key={index}
             ref={(el) => (imageRefs.current[index] = el)} // Store the refs for each image
-            src={src}
+            src={`/alphaa/${src}`}
             alt=""
             className="absolute inset-0 w-full h-full object-cover opacity-0"
           />
@@ -148,11 +148,11 @@ const CustomCarousel = () => {
   };
 
   return (
-    <div className="w-[50%] m-auto">
+    <div className="lg:w-[50%] m-auto">
       <div className='flex gap-3 items-center justify-center'>
         {
           images.map((img, index) => (
-            <img src={img} alt="persom-image" className='w-[13ex] rounded-xl border-b-[5px] border-r-[5px] border-t-0 border-l-0 border-secondary' />
+            <img src={`/alphaa/${img}`} alt="persom-image" className='w-[13ex] rounded-xl border-b-[5px] border-r-[5px] border-t-0 border-l-0 border-secondary' />
           ))
         }
       </div>

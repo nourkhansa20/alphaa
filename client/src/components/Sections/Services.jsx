@@ -78,9 +78,9 @@ const Services = () => {
     ]
     return (
         <div className='flex w-full justify-center gap-5 h-full'>
-            <div className='grid grid-cols-2 gap-x-10 gap-y-16 justify-items-center items-center'>
+            <div className='grid lg:grid-cols-2 gap-x-10 gap-y-16 justify-items-center items-center'>
                 {services.map((service, index) => (
-                    <Card key={index} className={`p-6 w-[52ex] h-[60ex] flex flex-col gap-9`}>
+                    <Card key={index} className={`p-6 max-w-[50ex] h-[60ex] flex flex-col gap-9`}>
                         <div className='flex items-center  gap-5'>
                             {service.icon}
                             <h2 className='font-semibold text-2xl'>{service.title}</h2>
@@ -122,13 +122,13 @@ const Banner = () => {
     }, [images]);
 
     return (
-        <div className='rounded-3xl border w-[55ex] relative overflow-hidden bg-white'>
+        <div className='rounded-3xl hidden md:block border w-[55ex] relative overflow-hidden bg-white'>
             <div className="absolute inset-0 z-0">
                 {images.map((src, index) => (
                     <img
                         key={index}
                         ref={(el) => (imageRefs.current[index] = el)} // Store the refs for each image
-                        src={src}
+                        src={`/alphaa/${src}`}
                         alt=""
                         className="absolute inset-0 w-full h-full object-cover opacity-0"
                     />

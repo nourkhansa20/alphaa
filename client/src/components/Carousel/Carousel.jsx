@@ -65,11 +65,11 @@ const CarouselItem = ({ item }) => {
 
     return (
         <div className={`text-center relative h-[95vh] overflow-hidden`} >
-            <div id='image' className=' bg-cover bg-center flex justify-center items-center h-full' style={{ backgroundImage: `url(${item.src})` }}>
+            <div id='image' className=' bg-cover bg-center flex justify-center items-center h-full' style={{ backgroundImage: `url('/alphaa/${item.src}')` }}>
 
-                <div id='text-container' className='opacity-0'>
-                    <h1 className='text-[10ex] text-white w-[30ex] font-bold'>{item.title}</h1>
-                    <p className='text-2xl text-white font-semibold '>{item.desc}</p>
+                <div id='text-container' className='opacity-0 flex flex-col justify-center items-center '>
+                    <h1 className='lg:text-[10ex] text-xl text-white w-[30ex] font-bold'>{item.title}</h1>
+                    <p className='lg:text-2xl text-sm p-5 text-white font-semibold '>{item.desc}</p>
                 </div>
             </div>
         </div>
